@@ -8,7 +8,7 @@
         echo"请填写用户名！<br/>";
     }
 
-    $password = $_POST["passwoad"];
+    $password = $_POST["Password"];
     if(!$password){
         $change = true;
         echo"请填写密码！<br/>";
