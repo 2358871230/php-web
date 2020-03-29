@@ -1,63 +1,33 @@
 <html>
     <head>
-        <title>登录</title>      
+        <title>First page</title>      
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-        <style>
-            .username{
-                float: left;
-                width: 100%;
-            }
-            .password{
-                float: left;
-                width: 100%;
-            }
-            .sex{
-                float: left;
-                width: 100%;
-            }
-            .play{
-                float: left;
-                width: 100%;
-            }
-            .brith{
-                float: left;
-                width: 100%;
-            }
-            .mine{
-                float: left;
-                width: 100%;
-                text-emphasis: none;
-            }
-        </style>
     </head>   
 
     <body>
-       <form action="post.php" method="POST"> 
-           <div class="username">
+       <form action="do_register.php" method="POST"> 
+           <div>
                用户名:<input type="text" value="" name="Username" placeholder="用户名" />
            </div>
-           <div class="password">
-               密码:<input type="password" value="" name="Password" title="6及以上个字符" />
-           </div>   
-           <div class="sex">
+           <div>
+               密码:<input type="password" value="" name="Password" title="4及以上个字符" />
+           </div> 
+           <div>
+               岁数:<input type="text" value="" name="Age" title="必须是数字" />
+           </div>  
+           <div>
             性别：
             男<input type="radio" value="male" name="gender" />
             女<input type="radio" value="female" name="gender" checked />
            </div> 
-           <div class="mine">
-            自我介绍：
-            <textarea rows="5" cols="50">
-                介绍一下自己，和大家交个朋友吧~~
-            </textarea>
-           </div>
-           <div class="play">
+           <div>
                兴趣：
-               王者荣耀<input type="checkbox" value="wanfzhe" name="interest" />
-               小说<input type="checkbox" value="story" name="interest"  />
-               舞蹈<input type="checkbox" value="dance" name="interest" />
+               LOL<input type="checkbox" value="LOL" name="Interests[]" />
+               PUBG<input type="checkbox" value="PUBG" name="Interests[]"  />
+               CF<input type="checkbox" value="CF" name="Interests[]" />
            </div>
-           <div class="brith">
-               出生月份：
+           <div>
+               出生月份
                <select name="Month">
                    <option value="1">一月</option>
                    <option value="2">二月</option>
@@ -72,8 +42,13 @@
                    <option value="11">十一月</option>
                    <option value="12">十二月</option>
            </div>
-          
-           <button type="submit" >提交</button>  
+           <div>
+                自我介绍
+                <textarea name="Intro" rows="5" cols="50">
+                    hello，my name is...??
+                </textarea>
+           </div>
+           <button type="submit" value="提交" >提交</button>  
        </form>
     </body>
 </html> 
