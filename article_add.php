@@ -29,7 +29,6 @@ if(!$currentUser){
             <div>
                 <input type="reset" value="重置" />
                 <input type="submit" value="提交"/>
-                
             </div>
         </form>
     </body>

@@ -66,7 +66,12 @@ function makePageUrl($pageIndex){
     $url.="pageIndex=".$pageIndex;
     return $url;
 }
-
+/*
+function makePageUrl($pageNo){
+    $currUrl = $_SERVER['REQUEST_URI'];
+    return preg_replace('/pageIndex=\d+/',"pageIndex=".$pageNo,$currUrl);
+}
+*/
 ?>
 
 <html>
@@ -79,6 +84,7 @@ function makePageUrl($pageIndex){
     <body>
         <div>
             <span>当前用户：<?=$currentUser["Username"]?></span>
+            
             <a href="logout.php">退出</a>
         </div>
         <h2>
@@ -104,30 +110,30 @@ function makePageUrl($pageIndex){
         <table border="0" cellspacing="0" cellpadding='0'>
             <head>
                 <tr>
-                    <th>
-                        标题
-                    </th>
-                    <th>
-                        作者
-                    </th>
-                    <th>
-                        时间
-                    </th>
-                    <th>
-                        操作
-                    </th>
+                    <th>标题</th>
+                    <th>作者</th>
+                    <th>时间</th>
+                    <th>操作</th>
                 </tr>
             </head>
             <tbody>
                 <?php if($rows) { ?>
                     <?php foreach($rows as $row){ ?>
                     <tr>
-                        <td><?=$row["Title"]?></td>
-                        <td><?php echo $row["AuthorName"]?></td>
-                        <td><?php echo $row["CreateTime"]?></td>
                         <td>
-                            详情
-                            修改
+                            <a href="article_detail.php?Id=<?=$row["Id"]?>"><?=$row["Title"]?></a>
+                        </td>
+                        <td><?php echo $row["AuthorName"]?></td>
+                        <td>
+                            <?php echo $row["CreateTime"]?><br />
+                            <?php echo $row["UpdateTime"]?>
+                        </td>
+                        <td>
+                            <a href="article_detail.php?Id=<?=$row["Id"]?>">详情</a>
+                            <?php if($currentUser["Username"]===$row["AuthorName"]) {?>
+                            <a href="article_modify.php?Id=<?=$row["Id"]?>"> 修改 </a>
+                             删除
+                            <?php }?>
                         </td>
                     </tr>
                 <?php } ?>
@@ -139,10 +145,13 @@ function makePageUrl($pageIndex){
             <tfoot>
                 <tr>
                     <td colspan="4">
-                        共<?=$total?>条记录，共<?=$pageCount?>页 当前是第<?=$pageIndex?>页
+                        共<?=$total?>条记录，共<?=$pageCount?>页 当前为<input type='text' value="<?=$pageIndex?>" />页
+                        <a href="article_list.php?<?=makePageUrl(1)?>">首页</a><
                         <?php for($i=1;$i<=$pageCount;$i++) { ?>
-                            <a class="<?=$pageIndex==$i?'currentPageNo':''?>" href="<?= makePageUrl($i)?>"><?=$i?></a>
+                            <a class="<?=$pageIndex==$i?'currentPageNo':''?>"  href="article_list.php?<?=makePageUrl($i)?>"><?=$i?></a>
                         <?php }?>
+                        >
+                        <a href="article_list.php?<?=makePageUrl($pageCount)?>">尾页</a>
                     </td>
                 </tr>            
             </tfoot>
