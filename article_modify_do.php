@@ -14,6 +14,6 @@ AND AuthorName='$Username' ";
 $conn = new mysqli("localhost","root","","myblog");
 $conn->query($sql);
 if($conn->error) die($conn->error);
-Header("Location: article_list.php");
+Header("Location: article_list_new.php");
 
 ?>

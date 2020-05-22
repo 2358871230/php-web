@@ -1,0 +1,423 @@
+@charset "utf-8";
+
+/* CSS Documentn */
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+body {
+    background-color: #eeeeee;
+}
+
+.layout {
+    margin: 5px auto;
+    width: 1080px;
+    background-color: #dddddd;
+}
+
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+.btn {
+    border: 1px solid #aaa;
+    background-color: #eee;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+.container {
+    display: table;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.container>.col-1,
+.container>.col-2,
+.container>.col-3,
+.container>.col-4,
+.container>.col-5,
+.container>.col-6,
+.container>.col-7,
+.container>.col-8,
+.container>.col-9,
+.container>.col-10,
+.container>.col-11,
+.container>.col-12 {
+    display: table-cell;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.container>.col-1 {
+    width: 8.33333%;
+}
+
+.container>.col-2 {
+    width: 16.66666%;
+}
+
+.container>.col-3 {
+    width: 25%;
+}
+
+.container>.col-4 {
+    width: 33.33333%;
+}
+
+.container>.col-5 {
+    width: 41.66667%;
+}
+
+.container>.col-6 {
+    width: 50%;
+}
+
+.container>.col-7 {
+    width: 58.33333%;
+}
+
+.container>.col-8 {
+    width: 66.66666%;
+}
+
+.container>.col-9 {
+    width: 75%;
+}
+
+.container>.col-10 {
+    width: 83.33333%;
+}
+
+.container>.col-11 {
+    width: 91.66667%;
+}
+
+.container>.col-12 {
+    width: 100%;
+}
+
+#header {
+    height: 110px;
+    background-color: red;
+}
+
+#workspace {
+    min-height: 200px;
+    padding: 0 10px;
+}
+
+#footer {
+    height: 50px;
+    background-color: #666;
+    color: #ccc;
+}
+
+#header>#caption-info {
+    height: 80px;
+    padding: 8px;
+}
+
+#header>#caption-info>h1 {
+    font-size: 24px;
+    color: white;
+}
+
+#header>#caption-info>.user-info {
+    text-align: right;
+}
+
+#header>#main-menu {
+    height: 30px;
+    background-color: black;
+}
+
+.user-name {
+    left: 10px;
+    top: 86px;
+    color: white;
+    z-index: 10;
+}
+
+.user-info>a {
+    left: 40px;
+    top: 80px;
+    color: white;
+    width: 200px;
+    height: 20px;
+    background-color: burlywood;
+    z-index: 2;
+}
+
+#main-menu {
+    color: #ffffff;
+}
+
+#main-menu ul {
+    list-style: none;
+}
+
+#page-area {
+    background-color: #ececec;
+    padding: 10px;
+}
+
+#main-menu li {
+    position: relative;
+    cursor: pointer;
+}
+
+#main-menu li:hover {
+    background-color: #666;
+}
+
+#main-menu>.topMenu>li {
+    padding: 5px 7px;
+    display: inline-block;
+    width: 100px;
+}
+
+#main-menu>.topMenu li ul {
+    display: none;
+    position: absolute;
+}
+
+#main-menu>.topMenu li:hover>ul {
+    display: block;
+    background-color: #333;
+    width: 100px;
+    padding: 5px 7px;
+}
+
+#main-menu>.topMenu>li>ul {
+    left: 0px;
+    top: 26px;
+}
+
+.topMenu>li>ul li ul {
+    top: 0px;
+    left: 80px;
+}
+
+.list .tbody,
+.thead,
+#recordInfo {
+    display: table;
+    width: 100%;
+}
+
+.list #recordInfo {
+    text-align: right;
+}
+
+.list .tr {
+    display: table-row;
+}
+
+.list .tr:hover {
+    background-color: #eee;
+}
+
+.list .td,
+.th {
+    display: table-cell;
+    padding: 5px;
+    text-align: certer;
+}
+
+.list .th {
+    font-weight: bold;
+    background-color: #666;
+    color: white;
+}
+
+.list .table .Title {
+    width: 50%;
+}
+
+.list .table .Author {
+    width: 12%;
+}
+
+.list .table .DateTime {
+    width: 25%;
+}
+
+.list .table .Op {
+    width: 13%;
+}
+
+.card .table {
+    display: block;
+    width: 100%;
+}
+
+.card .table .thead {
+    display: none;
+}
+
+.card .table .tr {
+    width: 300px;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    padding: 6px;
+    border-radius: 6px;
+    margin: 10px;
+    float: left;
+}
+
+.card .table .tr .Title {
+    background-color: #666;
+    color: #eee;
+    font-weight: bold;
+    padding: 6px;
+    margin: 6px;
+}
+
+.card #recordInfo {
+    clear: both;
+    text-align: right;
+}
+
+.card .table .tr:hover {
+    background-color: #eee;
+}
+
+.card .table .tr .td {
+    margin: 5px;
+    padding: 5px;
+    border-bottom: 1px dashed #ddd;
+}
+
+#tree li {
+    list-style: none;
+}
+
+#tree ul {
+    list-style: none;
+    margin-left: 20px;
+}
+
+.dataset {}
+
+.dataset .field {
+    position: relative;
+    margin: 10px;
+}
+
+.dataset .field label {
+    position: absolute;
+}
+
+.dataset .field input,
+.dataset .field textarea,
+.dataset .field .input {
+    margin-left: 100px;
+    padding: 3px 6px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    width: 70%;
+    min-width: 200px;
+    max-width: 900px;
+    display: inline-block;
+}
+
+.dataset .field textarea {
+    height: 200px;
+}
+
+.dataset .info {
+    margin: 5px;
+}
+
+.dataset .actions {
+    margin: 5px;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.dataset.detail {
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: white;
+}
+
+.dataset.detail .field .input {
+    border: 0px;
+}
+
+.dataset.detail .field.Title {
+    border-bottom: 2px solid #aaa;
+    padding-bottom: 5px;
+}
+
+.dataset.detail .field.Title .input {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.dataset.detail .field.Content {
+    border-bottom: 1px dashed #aaa;
+    padding-bottom: 5px;
+}
+
+.replyList>div {
+    margin: 5px;
+    border-bottom: 1px dashed #999;
+    padding: 3px;
+}
+
+.replyList>div>div {
+    display: inline-block;
+}
+
+.replyList>div>div:first-child {
+    font-weight: bold;
+}
+
+.replyList>div>div:nth-child(2) {
+    font-style: italic;
+}
+
+.createTime::after {
+    content: "->"
+}
+
+#tree li.collapse::before {
+    content: "+";
+}
+
+#tree li.expand::before {
+    content: "-";
+}
+
+
+/*
+.articleContent>span {
+    background-color: red;
+}
+
+.articleContent::before {
+    width: 10px;
+    content: " ";
+    border-right: 10px solid red;
+    border-top: 10px solid transparent;
+}*/
+
+.replyArea textarea {
+    border: 1px solid #666;
+    padding: 5px;
+    border-radius: 5px;
+    width: 50%;
+    min-width: 200px;
+    max-width: 500px;
+    height: 100px;
+}

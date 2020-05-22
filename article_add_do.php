@@ -24,5 +24,5 @@ $conn->query($sql);
 
 if($conn->error) echo $conn->error;
 else{
-    echo "添加成功,<a href='article_list.php'>跳转到列表</a>";
+    echo "添加成功,<a href='article_list_new.php'>跳转到列表</a>";
 }

@@ -21,16 +21,16 @@ form {
 }
 
 table {
-    border: 1px solid #ddd;
-    background-color: #eee;
+    border: 1px solid rgb(221, 221, 221);
+    background-color: rgb(238, 238, 238);
     width: 100%;
     border-collapse: collapse;
 }
 
 table th {
     font-weight: bold;
-    background-color: #666;
-    color: #eee;
+    background-color: rgb(102, 102, 102);
+    color: rgb(238, 238, 238);
 }
 
 table td,

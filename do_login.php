@@ -27,7 +27,7 @@
                 setcookie("password",$password);
             }
             $_SESSION["user"] = $row;
-            header("Location: article_list.php");
+            header("Location: article_list_new.php");
         }
     }
     

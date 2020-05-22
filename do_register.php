@@ -90,7 +90,7 @@ if(!$hasError){
     $conn->query($sql);
     if($conn->error) echo"数据库有错误:$conn->error";
     else{
-        echo"注册成功，<a href='login.php'>请点击这里登陆</a><br />";
+        header("Location: login.php");
     }
 }
 

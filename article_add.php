@@ -3,7 +3,7 @@
 session_start();
 $currentUser = isset($_SESSION["user"])?$_SESSION["user"]:null;
 if(!$currentUser){
-    echo "请首先<a href='login.php'>登录</a>";
+    header("Location:login.php");
 }else{
 ?>
 
